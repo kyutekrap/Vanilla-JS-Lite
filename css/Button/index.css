@@ -1,0 +1,46 @@
+.button {
+    border-radius: 20px;
+    width: 100%;
+    transition: all 3s ease;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.filled {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.filled:hover, .filled.active {
+    background-color: var(--main-color-strong);
+    border-color: var(--main-color-strong);
+}
+
+.outlined {
+    border: 1px solid var(--main-color);
+}
+
+.outlined:hover, .outlined.active {
+    background-color: var(--main-color-light);
+}
+
+.text {
+    background-color: transparent;
+    border: 1px transparent;
+}
+
+.text:hover, .text.active {
+    background-color: var(--main-color-light);
+    border-color: var(--main-color-light);
+}
+
+.medium {
+    padding: 10px 0px 10px 0px;
+}
+
+.big {
+    padding: 20px 0px 20px 0px;
+}

@@ -1,0 +1,17 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --main-color: #3498db;
+    --main-color-strong: #2986c4;
+    --main-color-light: #daebf6;
+    --neutral-color: #eeeeee;
+    --font-size: 16px;
+    --padding: 10px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}

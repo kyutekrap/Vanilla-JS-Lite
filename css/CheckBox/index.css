@@ -1,0 +1,14 @@
+.checkBox {
+    width: 0.9rem;
+    height: 0.9rem;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+}
+
+.checkBox:focus {
+    outline: none;
+}
+
+.checkBox:checked {
+    background-color: var(--main-color);
+}

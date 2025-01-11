@@ -1,0 +1,11 @@
+.link {
+    cursor: pointer;
+}
+
+.primary {
+    color: var(--main-color);
+}
+
+.secondary {
+    text-decoration: underline;
+}
