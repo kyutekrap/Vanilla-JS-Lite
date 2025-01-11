@@ -11,7 +11,7 @@ class CheckBoxExt {
     }
 }
 
-export function CheckBox(checked=false, editable=true) {
+export function CheckBox({checked=false, editable=true} = {}) {
     const checkBoxExt = new CheckBoxExt(checked, editable);
     return checkBoxExt._checkBox;
 }

@@ -20,7 +20,7 @@ class BackgroundExt {
     }
 }
 
-export function Background(width="auto", height="auto", src="", badge=null) {
+export function Background({width="auto", height="auto", src="", badge=null} = {}) {
     const backgroundExt = new BackgroundExt(width, height, src, badge);
     return backgroundExt._background;
 }

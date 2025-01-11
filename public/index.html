@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="/css/Input/index.css">
         <link rel="stylesheet" type="text/css" href="/css/Link/index.css">
         <link rel="stylesheet" type="text/css" href="/css/Option/index.css">
-        <link rel="stylesheet" type="text/css" href="/css/Paragraph/index.css">
+        <link rel="stylesheet" type="text/css" href="/css/Section/index.css">
         <link rel="stylesheet" type="text/css" href="/css/Select/index.css">
         <link rel="stylesheet" type="text/css" href="/css/Small/index.css">
         <link rel="stylesheet" type="text/css" href="/css/Span/index.css">
@@ -26,7 +26,31 @@
     <body>
         <script type="module" src="/api/index.js"></script>
         <script type="module">
+            import { AppBar, Header, Background, Footer, SubHeader, Small } from "/api/index.js";
 
+            AppBar({
+                L: [
+                    Background({
+                        width: "30px",
+                        height: "30px",
+                        src: "/asset/menu.svg",
+                    }),
+                    Header("My AppBar")
+                ],
+                R: [
+                    Background({
+                        width: "30px",
+                        height: "30px",
+                        src: "/asset/profile.svg",
+                    })
+                ]
+            });
+
+            Footer({
+                C: [
+                    Small("Created by Kyutekrap")
+                ]
+            });
         </script>
     </body>
 </html>

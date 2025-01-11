@@ -3,9 +3,9 @@ class HeaderExt {
     _header = null;
 
     constructor(text) {
-        this._header = document.createElement("p");
+        this._header = document.createElement("span");
         this._header.classList.add("header");
-        this._header.innerHTML = text;
+        this._header.textContent = text;
     }
 }
 

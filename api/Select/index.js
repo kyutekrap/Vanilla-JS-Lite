@@ -5,7 +5,7 @@ class SelectExt {
     constructor(options, selected, editable) {
         this._select = document.createElement("select");
         this._select.classList.add("select");
-        for (var i=0; i < options.length - 1; i++) {
+        for (var i=0; i < options.length; i++) {
             if (options[i] instanceof Option) {
                 this._select.appendChild(options[i]);
             }

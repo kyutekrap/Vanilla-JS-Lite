@@ -22,7 +22,7 @@ class ButtonExt {
     }
 }
 
-export function Button(variant="filled", size="medium", content="", onClick=()=>{}) {
+export function Button({variant="filled", size="medium", content="", onClick=()=>{}} = {}) {
     const buttonExt = new ButtonExt(variant, size, content, onClick);
     return buttonExt._button;
 }

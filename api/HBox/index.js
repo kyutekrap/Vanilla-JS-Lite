@@ -5,10 +5,9 @@ class HBoxExt {
     constructor(args) {
         this._hBox = document.createElement("div");
         this._hBox.classList.add("hBox");
-        for (var i; i < args.length - 1; i++) {
-            if (args[i] instanceof HTMLElement) this._hBox.appendChild(args[i]);
+        for (var i=0; i < args.length; i++) {
+            this._hBox.appendChild(args[i]);
         }
-        document.body.appendChild(this._hBox);
     }
 }
 

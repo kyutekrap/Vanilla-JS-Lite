@@ -6,6 +6,7 @@ const port = 3000;
 
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/api', express.static(path.join(__dirname, 'api')));
+app.use('/asset', express.static(path.join(__dirname, 'asset')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));

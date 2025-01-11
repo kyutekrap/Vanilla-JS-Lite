@@ -3,9 +3,9 @@ class SubHeaderExt {
     _subHeader = null;
 
     constructor(text) {
-        this._subHeader = document.createElement("p");
+        this._subHeader = document.createElement("span");
         this._subHeader.classList.add("subHeader");
-        this._subHeader.innerHTML = text;
+        this._subHeader.textContent = text;
     }
 }
 

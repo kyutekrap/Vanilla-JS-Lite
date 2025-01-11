@@ -13,7 +13,7 @@ class LinkExt {
     }
 }
 
-export function Link(size="medium", variant="primary", content="", onClick=()=>{}) {
+export function Link({size="medium", variant="primary", content="", onClick=()=>{}} = {}) {
     const linkExt = new LinkExt(size, variant, content, onClick);
     return linkExt._link;
 }

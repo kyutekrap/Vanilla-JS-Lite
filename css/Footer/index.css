@@ -1,6 +1,10 @@
 .footer {
-    width: 100%;
-    padding: 20px 8px 20px 8px;
+    width: calc(100% - 40px);
+    padding: 20px;
     background-color: var(--text-color);
     color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
 }

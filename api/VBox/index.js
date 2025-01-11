@@ -5,10 +5,9 @@ class VBoxExt {
     constructor(args) {
         this._vBox = document.createElement("div");
         this._vBox.classList.add("vBox");
-        for (var i; i < args.length - 1; i++) {
-            if (args[i] instanceof HTMLElement) this._vBox.appendChild(args[i]);
+        for (var i; i < args.length; i++) {
+            this._vBox.appendChild(args[i]);
         }
-        document.body.appendChild(this._vBox);
     }
 }
 

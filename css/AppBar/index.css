@@ -1,10 +1,10 @@
 .appBar {
-    width: 100%;
+    width: calc(100% - 40px);
     background-color: var(--bg-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px 20px 40px;
+    padding: 20px;
     border-bottom: 1px solid var(--neutral-color);
 }
