@@ -37,10 +37,10 @@
     border-color: var(--main-color-light);
 }
 
-.medium {
+.button.medium {
     padding: 10px 0px 10px 0px;
 }
 
-.big {
+.button.big {
     padding: 20px 0px 20px 0px;
 }
