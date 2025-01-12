@@ -16,3 +16,5 @@ export * from "./Span/index.js";
 export * from "./SubHeader/index.js";
 export * from "./VBox/index.js";
 export * from "./Section/index.js";
+export * from "./Form/index.js";
+export * from "./BgButton/index.js";
