@@ -5,17 +5,17 @@ class FormExt {
 
     _form = null;
 
-    constructor(layout, method, action, enctype) {
+    constructor(layout, fieldsets) {
         this._form = document.createElement("form");
         this._form.classList.add("form");
         this._form.appendChild(layout === "vertical" ? VBox() : HBox());
-        this._form.method = method;
-        this._form.action = action;
-        this._form.enctype = enctype;
+        for (var i=0; i < fieldsets.length; i++) {
+            this._form.appendChild(fieldsets[i]);
+        }
     }
 }
 
-export function Form({layout="vertical", method="submit", action="", enctype="multipart/form-data"} = {}) {
-    const formExt = new FormExt(layout, method, action, enctype);
+export function Form({layout="vertical", fieldsets=[]} = {}) {
+    const formExt = new FormExt(layout, fieldsets);
     return formExt._form;
 }
