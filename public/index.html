@@ -27,32 +27,10 @@
     </head>
     <body>
         <script type="module" src="/api/index.js"></script>
+        <script type="module" src="/view/index.js"></script>
         <script type="module">
-            import { AppBar, Header, Background, Footer, SubHeader, Small } from "/api/index.js";
-
-            AppBar({
-                L: [
-                    Background({
-                        width: "30px",
-                        height: "30px",
-                        src: "/asset/menu.svg",
-                    }),
-                    Header("My AppBar")
-                ],
-                R: [
-                    Background({
-                        width: "30px",
-                        height: "30px",
-                        src: "/asset/profile.svg",
-                    })
-                ]
-            });
-
-            Footer({
-                C: [
-                    Small("Created by Kyutekrap")
-                ]
-            });
+            import { Home } from "/view/index.js";
+            new Home();
         </script>
     </body>
 </html>
