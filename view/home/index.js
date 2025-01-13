@@ -1,4 +1,4 @@
-import { AppBar, Header, Background, Footer, Small, Section, Accordion, HBox, Span, CheckBox } from "/api/index.js";
+import { AppBar, Header, Background, Footer, Small, Section, Accordion, HBox, Span, CheckBox, Form, Button } from "/api/index.js";
 
 export class Home {
     constructor() {
@@ -24,10 +24,15 @@ export class Home {
             Accordion({
                 title: "My Accordion",
                 body: [
-                    HBox(
-                        Span("My Checkbox"),
-                        CheckBox()
-                    )
+                    Form({
+                        layout: "vertical",
+                        fieldsets: [
+                            HBox(
+                                Span("My Checkbox"),
+                                CheckBox()
+                            )
+                        ]
+                    })
                 ]
             })
         );
