@@ -1,6 +1,7 @@
 import {HBox} from "../HBox/index.js";
 import {Background} from "../Background/index.js";
 import {closeSnackbar} from "/code/index.js";
+import {Span} from "../Span/index.js";
 
 class SnackbarExt {
 
@@ -9,6 +10,9 @@ class SnackbarExt {
     constructor() {
         this._snackbar = HBox();
         this._snackbar.classList.add("snackbar");
+        const span = Span();
+        span.style.flex = 1;
+        this._snackbar.appendChild(span);
         const closeButton = Background({
             width: "20px",
             height: "20px",

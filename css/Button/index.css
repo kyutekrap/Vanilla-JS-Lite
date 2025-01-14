@@ -1,6 +1,5 @@
 .button {
     border-radius: 20px;
-    width: 100%;
     transition: all 3s ease;
     cursor: pointer;
 }

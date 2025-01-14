@@ -1,6 +1,3 @@
-import {VBox} from "../VBox/index.js";
-import {HBox} from "../HBox/index.js";
-
 class FormExt {
 
     _form = null;
@@ -8,7 +5,7 @@ class FormExt {
     constructor(layout, fieldsets) {
         this._form = document.createElement("form");
         this._form.classList.add("form");
-        this._form.appendChild(layout === "vertical" ? VBox() : HBox());
+        this._form.classList.add(layout === "vertical" ? "vbox" : "hbox");
         for (var i=0; i < fieldsets.length; i++) {
             this._form.appendChild(fieldsets[i]);
         }
