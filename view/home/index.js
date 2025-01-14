@@ -1,4 +1,4 @@
-import { Drawer, SubHeader, AppBar, Header, Background, Footer, Small, Section, Accordion, HBox, Span, CheckBox, Form, Button } from "/api/index.js";
+import { Drawer, Snackbar, SubHeader, AppBar, Header, Background, Footer, Small, Section, Accordion, HBox, Span, CheckBox, Form, Button } from "/api/index.js";
 import {openDrawer} from "/code/index.js";
 
 export class Home {
@@ -6,6 +6,8 @@ export class Home {
         Drawer(
             SubHeader("My Drawer")
         );
+
+        Snackbar();
 
         AppBar({
             L: [

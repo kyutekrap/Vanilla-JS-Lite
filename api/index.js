@@ -19,3 +19,4 @@ export * from "./Section/index.js";
 export * from "./Form/index.js";
 export * from "./BgButton/index.js";
 export * from "./Drawer/index.js";
+export * from "./Snackbar/index.js";
