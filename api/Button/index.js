@@ -16,9 +16,13 @@ class ButtonExt {
                     this._button.classList.remove("active");
                 });
             }
-            this._button.onClick = () => onClickWithCallBack();
+            this._button.addEventListener('click', (_) => {
+                onClickWithCallBack();
+            });
         } else {
-            this._button.onClick = () => onClick();
+            this._button.addEventListener('click', (_) => {
+                onClick();
+            });
         }
     }
 }

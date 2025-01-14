@@ -9,7 +9,9 @@ class LinkExt {
         this._link = size === "medium" ? Span(content) : Small(content);
         this._link.classList.add("link");
         this._link.classList.add(variant);
-        this._link.onClick = onClick;
+        this._link.addEventListener('click', (_) => {
+            onClick();
+        });
     }
 }
 

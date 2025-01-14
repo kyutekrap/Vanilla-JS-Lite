@@ -16,9 +16,13 @@ class BgButtonExt {
                     this._bgButton.classList.remove("active");
                 });
             }
-            this._bgButton.onClick = () => onClickWithCallBack();
+            this._bgButton.addEventListener('click', (_) => {
+                onClickWithCallBack();
+            });
         } else {
-            this._bgButton.onClick = () => onClick();
+            this._bgButton.addEventListener('click', (_) => {
+                onClick();
+            });
         }
     }
 }
