@@ -1,5 +1,5 @@
-import { Drawer, Snackbar, SubHeader, AppBar, Header, Background, Footer, Small, Section, Accordion, HBox, Span, CheckBox, Form, Button } from "/api/index.js";
-import { openDrawer, openSnackbar } from "/code/index.js";
+import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, Background, Footer, Small, Section, Accordion, HBox, Span, CheckBox, Form, Button } from "/api/index.js";
+import { openDrawer, openSnackbar, openModal } from "/code/index.js";
 
 export class Home {
     constructor() {
@@ -8,6 +8,8 @@ export class Home {
         );
 
         Snackbar();
+
+        Modal();
 
         AppBar({
             L: [
@@ -39,11 +41,18 @@ export class Home {
                                 Span("My Checkbox"),
                                 CheckBox()
                             ),
-                            Button({
-                                variant: "filled",
-                                content: "Test Snackbar",
-                                onClick: () => openSnackbar("Hellow!")
-                            })
+                            HBox(
+                                Button({
+                                    content: "Test Snackbar",
+                                    onClick: () => openSnackbar("Hellow!")
+                                }),
+                                Button({
+                                    content: "Test Modal",
+                                    onClick: () => openModal(
+                                        SubHeader("My Modal")
+                                    )
+                                })
+                            )
                         ]
                     }),
                 ]
