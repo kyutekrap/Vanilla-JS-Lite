@@ -1,4 +1,4 @@
-import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, Textarea, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
+import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, FileInput, Textarea, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
 import { openDrawer, openSnackbar, openModal } from "/code/index.js";
 
 export class Home {
@@ -38,7 +38,7 @@ export class Home {
                         layout: "vertical",
                         fieldsets: [
                             HBox(
-                                Span("My Checkbox"),
+                                Span("My Input-Checkbox"),
                                 Input({
                                     variant: "checkbox"
                                 })
@@ -46,6 +46,10 @@ export class Home {
                             HBox(
                                 Span("My Textarea"),
                                 Textarea()
+                            ),
+                            HBox(
+                                Span("My File"),
+                                FileInput()
                             ),
                             HBox(
                                 Button({

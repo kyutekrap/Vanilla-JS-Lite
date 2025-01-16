@@ -7,6 +7,7 @@
     background: var(--background);
     padding: 6px;
     border-radius: 5px;
+    border: 1px solid var(--text-color);
 }
 
 .input:focus {
@@ -37,7 +38,6 @@ input[type="checkbox"] {
     height: 16px;
     width: 16px;
     cursor: pointer;
-    border: 1px solid var(--text-color);
     border-radius: 2px !important;
 }
 

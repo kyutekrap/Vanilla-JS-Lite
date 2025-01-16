@@ -21,3 +21,4 @@ export * from "./Drawer/index.js";
 export * from "./Snackbar/index.js";
 export * from "./Modal/index.js";
 export * from "./Textarea/index.js";
+export * from "./FileInput/index.js";

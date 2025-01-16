@@ -8,7 +8,7 @@ class TextareaExt {
         this._textarea.readOnly = !editable;
         this._textarea.placeholder = placeholder;
         this._textarea.value = content;
-        this._textarea.col = lines;
+        this._textarea.rows = lines;
     }
 }
 
