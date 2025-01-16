@@ -1,4 +1,4 @@
-import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
+import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, Textarea, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
 import { openDrawer, openSnackbar, openModal } from "/code/index.js";
 
 export class Home {
@@ -42,6 +42,10 @@ export class Home {
                                 Input({
                                     variant: "checkbox"
                                 })
+                            ),
+                            HBox(
+                                Span("My Textarea"),
+                                Textarea()
                             ),
                             HBox(
                                 Button({

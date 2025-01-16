@@ -1,0 +1,7 @@
+.textarea {
+    border-radius: 5px;
+}
+
+.textarea:focus {
+    outline: none;
+}

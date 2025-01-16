@@ -2,11 +2,17 @@ import {VBox} from "../VBox/index.js";
 import {HBox} from "../HBox/index.js";
 import {Background} from "../Background/index.js";
 
-class AccordionExt {
+class AccordionStates {
+    _isOpen = false;
+}
+
+class AccordionExt extends AccordionStates {
 
     _accordion = null;
 
     constructor(title, body, imageOnClose) {
+        super();
+
         this._accordion = document.createElement("div");
         this._accordion.classList.add("accordion");
 
@@ -21,10 +27,6 @@ class AccordionExt {
         const headerImage = Background({width: "25px", height: "25px", src: imageOnClose});
         header.appendChild(headerImage);
 
-        header.addEventListener('click', (_) => {
-            this.toggleAccordion(header);
-        });
-
         this._accordion.appendChild(header);
 
         const content = VBox();
@@ -33,19 +35,23 @@ class AccordionExt {
             content.appendChild(body[i]);
         }
         this._accordion.appendChild(content);
+
+        header.addEventListener('click', (_) => {
+            this.toggleAccordion(content);
+        });
     }
 
-    toggleAccordion(header) {
-        const content = header.nextElementSibling;
-        const isActive = content.style.maxHeight;
-    
-        document.querySelectorAll('.accordion-content').forEach(item => {
-            item.style.maxHeight = null;
-        });
-    
-        if (!isActive) {
-            content.style.maxHeight = content.scrollHeight + 40 + "px";
+    toggleAccordion(content) {
+        if (!this._isOpen) {
+            var targetHeight = 0;
+            Array.from(content.children).forEach(child => {
+                targetHeight += child.scrollHeight;
+            });
+            content.style.maxHeight = targetHeight + 40 + "px";
+        } else {
+            content.style.maxHeight = 0;
         }
+        this._isOpen = !this._isOpen;
     }
 }
 
