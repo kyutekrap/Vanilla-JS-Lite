@@ -1,7 +1,46 @@
 .input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: var(--background);
     padding: 6px;
+    border-radius: 20px;
 }
 
 .input:focus {
     outline: none;
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]::-moz-inner-spin-button {
+    display: none;
+}
+
+input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    border-radius: 2px !important;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--main-color);
 }

@@ -2,18 +2,17 @@ class InputExt {
 
     _input = null;
 
-    constructor(variant, editable, placeholder, content, onChange) {
+    constructor(variant, editable, placeholder, content) {
         this._input = document.createElement("input");
         this._input.classList.add("input");
-        this._input.classList.add(variant);
         this._input.value = content;
         this._input.placeholder = placeholder;
         this._input.readOnly = !editable;
-        this._input.onChange = onChange;
+        this._input.type = variant;
     }
 }
 
-export function Input(variant="line", editable=true, placeholder="", content="", onChange=()=>{}) {
-    const inputExt = new InputExt(variant, editable, placeholder, content, onChange);
+export function Input({variant="line", editable=true, placeholder="", content=""} = {}) {
+    const inputExt = new InputExt(variant, editable, placeholder, content);
     return inputExt._input;
 }

@@ -2,7 +2,6 @@ export * from "./Accordion/index.js";
 export * from "./AppBar/index.js";
 export * from "./Background/index.js";
 export * from "./Button/index.js";
-export * from "./CheckBox/index.js";
 export * from "./Footer/index.js";
 export * from "./Grid/index.js";
 export * from "./HBox/index.js";

@@ -1,4 +1,4 @@
-import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, Background, Footer, Small, Section, Accordion, HBox, Span, CheckBox, Form, Button } from "/api/index.js";
+import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
 import { openDrawer, openSnackbar, openModal } from "/code/index.js";
 
 export class Home {
@@ -39,7 +39,9 @@ export class Home {
                         fieldsets: [
                             HBox(
                                 Span("My Checkbox"),
-                                CheckBox()
+                                Input({
+                                    variant: "checkbox"
+                                })
                             ),
                             HBox(
                                 Button({
