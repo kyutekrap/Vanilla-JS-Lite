@@ -8,7 +8,6 @@ export * from "./HBox/index.js";
 export * from "./Header/index.js";
 export * from "./Input/index.js";
 export * from "./Link/index.js";
-export * from "./Option/index.js";
 export * from "./Select/index.js";
 export * from "./Small/index.js";
 export * from "./Span/index.js";

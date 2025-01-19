@@ -12,7 +12,7 @@ class InputExt {
     }
 }
 
-export function Input({variant="line", editable=true, placeholder="", content=""} = {}) {
+export function Input({variant="text", editable=true, placeholder="", content=""} = {}) {
     const inputExt = new InputExt(variant, editable, placeholder, content);
     return inputExt._input;
 }

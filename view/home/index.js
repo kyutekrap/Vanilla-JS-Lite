@@ -1,4 +1,4 @@
-import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, FileInput, Textarea, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
+import { Modal, Drawer, Snackbar, Select, SubHeader, AppBar, Header, FileInput, Textarea, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
 import { openDrawer, openSnackbar, openModal, toggleDarkMode } from "/code/index.js";
 
 export class Home {
@@ -52,6 +52,12 @@ export class Home {
                             HBox(
                                 Span("My File"),
                                 FileInput()
+                            ),
+                            HBox(
+                                Span("My Select"),
+                                Select({
+                                    options: ["Option 1", "Option 2", "Option 3"]
+                                })
                             ),
                             HBox(
                                 Button({
