@@ -1,3 +1,3 @@
 export function closeModal() {
-    document.querySelector(".backdrop").classList.remove("open");
+    document.querySelector(".modal").classList.remove("open");
 }

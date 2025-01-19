@@ -1,4 +1,4 @@
-import { Modal, Drawer, Snackbar, Select, SubHeader, AppBar, Header, FileInput, Textarea, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
+import { Modal, Drawer, Snackbar, Select, SubHeader, AppBar, Header, FileInput, Textarea, Grid, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
 import { openDrawer, openSnackbar, openModal, toggleDarkMode } from "/code/index.js";
 
 export class Home {
@@ -74,6 +74,30 @@ export class Home {
                         ]
                     }),
                 ]
+            })
+        );
+
+        Section(
+            Grid({
+                columns: ["Column 1", "Column 2", "Column 3"],
+                data: [
+                    {
+                        "Column 1": "Value 1", 
+                        "Column 2": "Value 2",
+                        "Column 3": "Value 2"
+                    },
+                    {
+                        "Column 1": "Value 1", 
+                        "Column 2": "Value 2",
+                        "Column 3": "Value 2"
+                    },
+                    {
+                        "Column 1": "Value 1", 
+                        "Column 2": "Value 2",
+                        "Column 3": "Value 2"
+                    }
+                ],
+                checkbox: true
             })
         );
         

@@ -2,10 +2,10 @@
     cursor: pointer;
 }
 
-.primary {
+.link.primary {
     color: var(--main-color);
 }
 
-.secondary {
+.link.secondary {
     text-decoration: underline;
 }

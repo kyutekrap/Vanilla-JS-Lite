@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.optionContainer {
+.select .optionContainer {
     display: none;
     border-radius: var(--border-radius);
     position: absolute;
@@ -15,16 +15,16 @@
     max-height: 300px;
 }
 
-.optionContainer.open {
+.select .optionContainer.open {
     display: block;
 }
 
-.option {
+.select .option {
     display: block;
     cursor: pointer;
     padding: var(--quarter-padding);
 }
 
-.option.filter {
+.select .option.filter {
     display: none;
 }

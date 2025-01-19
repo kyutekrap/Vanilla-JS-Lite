@@ -8,10 +8,10 @@ class ModalExt {
 
     constructor() {
         this._modal = document.createElement("div");
-        this._modal.classList.add("backdrop");
+        this._modal.classList.add("modal");
 
         const content = document.createElement("div");
-        content.classList.add("modal");
+        content.classList.add("modal-content");
 
         const closeButton = Background({width: "25px", height: "25px", src: "/asset/close.svg", onClick: closeModal});
         closeButton.style.marginLeft = "auto";

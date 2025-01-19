@@ -5,7 +5,7 @@
     filter: invert(var(--invert));
 }
 
-.badgeContainer {
+.badge {
     border-radius: 50%;
     display: flex;
     justify-content: center;

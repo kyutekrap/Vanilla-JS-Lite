@@ -7,13 +7,13 @@
     position: relative;
 }
 
-.accordion-header {
+.accordion .accordion-header {
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding: var(--padding) 0;
 }
 
-.accordion-content {
+.accordion .accordion-content {
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -21,7 +21,7 @@
     overflow: visible;
 }
 
-.accordion-content.open {
+.accordion .accordion-content.open {
     height: auto;
     opacity: 1;
     visibility: visible;

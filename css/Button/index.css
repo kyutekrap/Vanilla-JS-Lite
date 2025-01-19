@@ -8,30 +8,30 @@
     outline: none;
 }
 
-.filled {
+.button.filled {
     background-color: var(--main-color);
     border: 1px solid var(--main-color);
 }
 
-.filled:hover, .filled.active {
+.button.filled:hover, .button.filled.active {
     background-color: var(--main-color-strong);
     border-color: var(--main-color-strong);
 }
 
-.outlined {
+.button.outlined {
     border: 1px solid var(--main-color);
 }
 
-.outlined:hover, .outlined.active {
+.button.outlined:hover, .button.outlined.active {
     background-color: var(--main-color-light);
 }
 
-.text {
+.button .text {
     background-color: transparent;
     border: 1px transparent;
 }
 
-.text:hover, .text.active {
+.button .text:hover, .button .text.active {
     background-color: var(--main-color-light);
     border-color: var(--main-color-light);
 }

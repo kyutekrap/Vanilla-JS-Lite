@@ -14,7 +14,7 @@
     outline: none;
 }
 
-input[type="number"] {
+.input[type="number"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -24,23 +24,23 @@ input[type="number"] {
     font-size: var(--normal-font-size);
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type="number"]::-moz-inner-spin-button {
+.input[type="number"]::-moz-inner-spin-button {
     display: none;
 }
 
-input[type="checkbox"] {
+.input[type="checkbox"] {
     height: 16px;
     width: 16px;
     cursor: pointer;
     border-radius: 2px !important;
 }
 
-input[type="checkbox"]:checked {
+.input[type="checkbox"]:checked {
     background-color: var(--main-color);
 }

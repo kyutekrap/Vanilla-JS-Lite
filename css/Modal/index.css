@@ -1,12 +1,4 @@
 .modal {
-    z-index: 2;
-    background-color: var(--bg-color);
-    border-radius: var(--border-radius);
-    padding: var(--padding);
-    min-width: 300px;
-}
-
-.backdrop {
     z-index: 1;
     width: 100vw;
     height: 100vh;
@@ -20,6 +12,14 @@
     display: none;
 }
 
-.open {
+.modal .modal-content {
+    z-index: 2;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    min-width: 300px;
+}
+
+.modal.open {
     display: flex;
 }

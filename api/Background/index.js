@@ -14,7 +14,7 @@ class BackgroundExt {
             const badgeContainer = document.createElement("div");
             const badgeContent = Small(badge);
             badgeContainer.appendChild(badgeContent);
-            badgeContainer.classList.add("badgeContainer");
+            badgeContainer.classList.add("badge");
             this._background.appendChild(badgeContainer);
         }
         if (onClick) {

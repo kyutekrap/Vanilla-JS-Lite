@@ -11,6 +11,6 @@
     background-color: var(--neutral-color);
 }
 
-.rounded {
+.bgButton .rounded {
     border-radius: 50%;
 }
