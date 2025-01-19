@@ -5,6 +5,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: var(--padding);
     border-bottom: 1px solid var(--neutral-color);
 }

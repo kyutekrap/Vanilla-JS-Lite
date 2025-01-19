@@ -1,6 +1,6 @@
 .vBox {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: var(--normal-font-size);
     justify-content: center;
 }

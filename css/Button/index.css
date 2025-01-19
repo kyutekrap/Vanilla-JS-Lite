@@ -37,9 +37,9 @@
 }
 
 .button.medium {
-    padding: 10px;
+    padding: var(--half-padding);
 }
 
 .button.big {
-    padding: 20px;
+    padding: var(--padding);
 }

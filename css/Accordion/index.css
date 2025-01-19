@@ -1,7 +1,7 @@
 .accordion {
     border: 1px solid var(--neutral-color);
-    border-radius: 5px;
-    padding: 0px 20px;
+    border-radius: var(--border-radius);
+    padding: 0px var(--padding);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -10,7 +10,7 @@
 .accordion-header {
     cursor: pointer;
     transition: background-color 0.3s ease;
-    padding: 20px 0;
+    padding: var(--padding) 0;
 }
 
 .accordion-content {

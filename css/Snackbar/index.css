@@ -1,8 +1,8 @@
 .snackbar {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 20px;
+    bottom: var(--padding);
+    left: var(--padding);
+    padding: var(--padding);
     color: var(--bg-color);
     background-color: var(--text-color);
     display: none;

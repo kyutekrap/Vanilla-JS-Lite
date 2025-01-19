@@ -1,6 +1,6 @@
 .footer {
-    width: calc(100% - 40px);
-    padding: 20px;
+    width: calc(100% - var(--padding) * 2);
+    padding: var(--padding);
     background-color: var(--text-color);
     color: var(--bg-color);
     display: flex;

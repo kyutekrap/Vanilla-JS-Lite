@@ -1,5 +1,5 @@
 .bgButton {
-    padding: 5px;
+    padding: var(--quarter-padding);
     background-color: transparent;
     cursor: pointer;
     background-position: center;
