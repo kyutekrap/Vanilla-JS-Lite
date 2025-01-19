@@ -1,20 +1,28 @@
 .accordion {
     border: 1px solid var(--neutral-color);
     border-radius: 5px;
-    padding: 0px 20px 0px 20px;
-    overflow: hidden;
+    padding: 0px 20px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .accordion-header {
     cursor: pointer;
     transition: background-color 0.3s ease;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0;
 }
 
 .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    overflow: visible;
+}
+
+.accordion-content.open {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
 }

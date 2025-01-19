@@ -7,7 +7,6 @@ class AccordionStates {
 }
 
 class AccordionExt extends AccordionStates {
-
     _accordion = null;
 
     constructor(title, body, imageOnClose) {
@@ -24,38 +23,34 @@ class AccordionExt extends AccordionStates {
         headerTitle.style.flex = "1";
         header.appendChild(headerTitle);
         
-        const headerImage = Background({width: "25px", height: "25px", src: imageOnClose});
+        const headerImage = Background({ width: "25px", height: "25px", src: imageOnClose });
         header.appendChild(headerImage);
 
         this._accordion.appendChild(header);
 
         const content = VBox();
         content.classList.add("accordion-content");
-        for (var i=0; i<body.length; i++) {
+        for (let i = 0; i < body.length; i++) {
             content.appendChild(body[i]);
         }
         this._accordion.appendChild(content);
 
-        header.addEventListener('click', (_) => {
+        header.addEventListener('click', () => {
             this.toggleAccordion(content);
         });
     }
 
     toggleAccordion(content) {
         if (!this._isOpen) {
-            var targetHeight = 0;
-            Array.from(content.children).forEach(child => {
-                targetHeight += child.scrollHeight;
-            });
-            content.style.maxHeight = targetHeight + 40 + "px";
+            content.classList.add("open");
         } else {
-            content.style.maxHeight = 0;
+            content.classList.remove("open");
         }
         this._isOpen = !this._isOpen;
     }
 }
 
-export function Accordion({title="", body=[], imageOnClose="/asset/chev-down.svg"} = {}) {
+export function Accordion({ title = "", body = [], imageOnClose = "/asset/chev-down.svg" } = {}) {
     const accordionExt = new AccordionExt(title, body, imageOnClose);
     return accordionExt._accordion;
 }
