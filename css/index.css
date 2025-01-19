@@ -5,8 +5,13 @@
     --main-color-strong: #2986c4;
     --main-color-light: #daebf6;
     --neutral-color: #eeeeee;
-    --font-size: 16px;
-    --padding: 10px;
+    --invert: 0;
+}
+
+body.dark {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --invert: 1;
 }
 
 body {

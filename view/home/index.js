@@ -1,8 +1,10 @@
 import { Modal, Drawer, Snackbar, SubHeader, AppBar, Header, FileInput, Textarea, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
-import { openDrawer, openSnackbar, openModal } from "/code/index.js";
+import { openDrawer, openSnackbar, openModal, toggleDarkMode } from "/code/index.js";
 
 export class Home {
     constructor() {
+        toggleDarkMode();
+
         Drawer(
             SubHeader("My Drawer")
         );

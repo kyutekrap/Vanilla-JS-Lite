@@ -4,3 +4,4 @@ export * from "./closeSnackbar.js";
 export * from "./openSnackbar.js";
 export * from "./closeModal.js";
 export * from "./openModal.js";
+export * from "./toggleDarkMode.js";

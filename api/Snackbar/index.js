@@ -19,7 +19,6 @@ class SnackbarExt {
             src: "/asset/close.svg",
             onClick: closeSnackbar
         });
-        closeButton.style.filter = "invert(1)";
         this._snackbar.appendChild(closeButton);
         document.body.appendChild(this._snackbar);
     }
