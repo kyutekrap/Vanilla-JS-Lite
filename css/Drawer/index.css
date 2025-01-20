@@ -19,3 +19,9 @@
 .drawer.open {
     transform: translateX(0);
 }
+
+@media (max-width: 768px) {
+    .drawer {
+        width: 100vw;
+    }
+}

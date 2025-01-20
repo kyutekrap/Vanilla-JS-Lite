@@ -4,7 +4,6 @@
     background-color: var(--text-color);
     color: var(--bg-color);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
 }

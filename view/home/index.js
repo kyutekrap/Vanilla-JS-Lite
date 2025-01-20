@@ -112,10 +112,6 @@ export class Home {
             })
         );
         
-        Footer({
-            C: [
-                Small("Created by Kyutekrap")
-            ]
-        });
+        Footer(Small("Created by Kyutekrap"));
     }
 }
