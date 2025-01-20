@@ -36,15 +36,17 @@ class AccordionExt extends AccordionStates {
         this._accordion.appendChild(content);
 
         header.addEventListener('click', () => {
-            this.toggleAccordion(content);
+            this.toggleAccordion(content, headerImage);
         });
     }
 
-    toggleAccordion(content) {
+    toggleAccordion(content, headerImage) {
         if (!this._isOpen) {
             content.classList.add("open");
+            headerImage.style.transform = "rotate(180deg)";
         } else {
             content.classList.remove("open");
+            headerImage.style.transform = "rotate(0deg)";
         }
         this._isOpen = !this._isOpen;
     }
