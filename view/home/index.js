@@ -1,4 +1,4 @@
-import { Modal, Drawer, Snackbar, Select, SubHeader, AppBar, Header, FileInput, Textarea, Grid, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
+import { Modal, Drawer, Snackbar, Select, SubHeader, AppBar, Header, FileInput, Textarea, Table, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
 import { openDrawer, openSnackbar, openModal, toggleDarkMode } from "/code/index.js";
 
 export class Home {
@@ -80,7 +80,7 @@ export class Home {
         Section(
             Form({
                 fieldsets: [
-                    Grid({
+                    Table({
                         columns: ["Column 1", "Column 2", "Column 3"],
                         data: [
                             {

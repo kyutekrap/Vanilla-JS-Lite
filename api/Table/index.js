@@ -1,7 +1,7 @@
 import {Input} from "../Input/index.js";
 import {Span} from "../Span/index.js";
 
-class GridStates {
+class TableStates {
     _filterCol = "";
     _filterDir = null;
     _checkboxes = [];
@@ -25,9 +25,9 @@ class GridStates {
     }
 }
 
-class GridExt extends GridStates {
+class TableExt extends TableStates {
 
-    _grid = null;
+    _table = null;
     _columns = null;
     _data = null;
     _checkbox = false;
@@ -39,8 +39,8 @@ class GridExt extends GridStates {
         this._data = data;
         this._checkbox = checkbox;
 
-        this._grid = document.createElement("div");
-        this._grid.classList.add("grid");
+        this._table = document.createElement("div");
+        this._table.classList.add("table");
 
         const innerGrid = document.createElement("div");
         innerGrid.classList.add("inner-grid");
@@ -112,7 +112,7 @@ class GridExt extends GridStates {
             }
         }
         
-        this._grid.appendChild(innerGrid);
+        this._table.appendChild(innerGrid);
     }
 
     updateCheckboxAll(checked) {
@@ -138,7 +138,7 @@ class GridExt extends GridStates {
             return 0;
         });
     
-        const innerGrid = this._grid.querySelector('.inner-grid');
+        const innerGrid = this._table.querySelector('.inner-grid');
         innerGrid.innerHTML = '';
     
         this.renderHeader(innerGrid);
@@ -227,7 +227,7 @@ class GridExt extends GridStates {
 
     handleMouseMove = (event, innerGrid) => {
         if (this._activeIndex !== null) {
-            const newWidth = event.clientX - this._grid.getBoundingClientRect().left;
+            const newWidth = event.clientX - this._table.getBoundingClientRect().left;
             const minWidth = 150;
 
             this._columnWidths[this._activeIndex] = `${Math.max(minWidth, newWidth)}px`;
@@ -242,7 +242,7 @@ class GridExt extends GridStates {
     };
 }
 
-export function Grid({columns=[], data=[], checkbox=false, useAutoSort=false}) {
-    const gridExt = new GridExt(columns, data, checkbox, useAutoSort);
-    return gridExt._grid;
+export function Table({columns=[], data=[], checkbox=false, useAutoSort=false}) {
+    const tableExt = new TableExt(columns, data, checkbox, useAutoSort);
+    return tableExt._table;
 }

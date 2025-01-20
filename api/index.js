@@ -3,7 +3,7 @@ export * from "./AppBar/index.js";
 export * from "./Background/index.js";
 export * from "./Button/index.js";
 export * from "./Footer/index.js";
-export * from "./Grid/index.js";
+export * from "./Table/index.js";
 export * from "./HBox/index.js";
 export * from "./Header/index.js";
 export * from "./Input/index.js";
