@@ -1,3 +1,5 @@
 # Vanilla JS Lite
 
-I'm still working on it!
+Create web pages without HTML and React. By using this template.
+
+![alt text](image.png)
