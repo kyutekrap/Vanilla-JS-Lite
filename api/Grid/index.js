@@ -1,18 +1,17 @@
 class GridExt {
-
     _grid = null;
 
-    constructor(columns, items) {
+    constructor(items) {
         this._grid = document.createElement("div");
         this._grid.classList.add("grid");
-        this._grid.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
-        for (var i=0; i<items.length; i++) {
+        for (var i = 0; i < items.length; i++) {
             this._grid.appendChild(items[i]);
         }
     }
 }
 
-export function Grid({columns=3, items=[]} = {}) {
-    const gridExt = new GridExt(columns, items);
+export function Grid({ columns = 3, items = [] } = {}) {
+    const gridExt = new GridExt(items);
+    gridExt._grid.style.setProperty('--grid-columns', columns);
     return gridExt._grid;
 }
