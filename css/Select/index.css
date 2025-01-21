@@ -22,7 +22,8 @@
 .select .option {
     display: block;
     cursor: pointer;
-    padding: var(--quarter-padding);
+    padding-top: var(--quarter-padding);
+    padding-bottom: var(--quarter-padding);
 }
 
 .select .option.filter {

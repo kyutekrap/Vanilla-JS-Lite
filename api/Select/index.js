@@ -1,4 +1,5 @@
 import {Input} from "../Input/index.js";
+import {Span} from "../Span/index.js";
 
 class SelectExt {
 
@@ -19,9 +20,8 @@ class SelectExt {
         const optionContainer = document.createElement("div");
         optionContainer.classList.add("optionContainer");
         for (var i=0; i < options.length; i++) {
-            const option = document.createElement("div");
+            const option = Span(options[i]);
             option.classList.add("option");
-            option.innerHTML = options[i];
             option.addEventListener("click", (e) => {
                 input.value = e.target.innerHTML;
                 this.filterItems(optionContainer, e.target.innerHTML);
