@@ -20,6 +20,7 @@
 
 .button.outlined {
     border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
 }
 
 .button.outlined:hover, .button.outlined.active {
