@@ -22,3 +22,4 @@ export * from "./Modal/index.js";
 export * from "./Textarea/index.js";
 export * from "./FileInput/index.js";
 export * from "./Grid/index.js";
+export * from "./Line/index.js";
