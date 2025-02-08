@@ -5,9 +5,9 @@
     font-family: inherit;
     font-size: var(--normal-font-size);
     background: var(--background);
-    padding: 6px;
+    padding: var(--quarter-padding);
     border-radius: var(--border-radius);
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--gray-color);
 }
 
 .input:focus {
@@ -35,12 +35,18 @@
 }
 
 .input[type="checkbox"] {
-    height: 16px;
-    width: 16px;
+    height: 16px !important;
+    width: 16px !important;
     cursor: pointer;
     border-radius: 2px !important;
 }
 
 .input[type="checkbox"]:checked {
     background-color: var(--main-color);
+}
+
+@media (max-width: 576px) {
+    .input {
+        width: 100%;
+    }
 }
