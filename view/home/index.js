@@ -1,4 +1,4 @@
-import { Modal, Drawer, Snackbar, Select, SubHeader, AppBar, Header, Grid, FileInput, Textarea, Table, Background, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
+import { Modal, Drawer, Snackbar, Select, VBox, SubHeader, AppBar, BgButton, Grid, FileInput, Textarea, Table, FlexBox, Input, Footer, Small, Section, Accordion, HBox, Span, Form, Button } from "/api/index.js";
 import { openDrawer, openSnackbar, openModal, toggleDarkMode } from "/code/index.js";
 
 export class Home {
@@ -13,28 +13,29 @@ export class Home {
 
         Modal();
 
-        AppBar({
-            L: [
-                Background({
-                    width: "30px",
-                    height: "30px",
-                    src: "/asset/menu.svg",
-                    onClick: openDrawer
-                }),
-                Header("My AppBar")
-            ],
-            R: [
-                Background({
-                    width: "30px",
-                    height: "30px",
-                    src: "/asset/profile.svg",
-                })
-            ]
-        });
+        AppBar(
+            BgButton({
+                src: "/asset/menu.svg",
+                rounded: true,
+                width: "25px",
+                height: "25px",
+                onClick: () => openDrawer()
+            }),
+            SubHeader("My App"),
+            FlexBox({
+                flexGrow: 1
+            }),
+            BgButton({
+                src: "/asset/profile.svg",
+                rounded: true,
+                width: "27px",
+                height: "27px"
+            })
+        );
 
         Section(
             Accordion({
-                title: "My Accordion",
+                title: "Test",
                 body: [
                     Form({
                         layout: "vertical",
@@ -42,21 +43,23 @@ export class Home {
                             Grid({
                                 columns: 3,
                                 items: [
-                                    HBox(
+                                    VBox(
                                         Span("My Input-Checkbox"),
                                         Input({
                                             variant: "checkbox"
                                         })
                                     ),
-                                    HBox(
+                                    VBox(
                                         Span("My Textarea"),
-                                        Textarea()
+                                        Textarea({
+                                            resize: "vertical"
+                                        })
                                     ),
-                                    HBox(
+                                    VBox(
                                         Span("My File"),
                                         FileInput()
                                     ),
-                                    HBox(
+                                    VBox(
                                         Span("My Select"),
                                         Select({
                                             options: ["Option 1", "Option 2", "Option 3"]
@@ -64,56 +67,53 @@ export class Home {
                                     )
                                 ]
                             }),
-                            HBox(
-                                Button({
-                                    content: "Test Snackbar",
-                                    onClick: () => openSnackbar("Hellow!")
-                                }),
-                                Button({
-                                    content: "Test Modal",
-                                    onClick: () => openModal(
-                                        SubHeader("My Modal")
+                            FlexBox({
+                                alignSelf: "flex-end",
+                                children: [
+                                    HBox(
+                                        Button({
+                                            content: "Open Modal",
+                                            width: "120px",
+                                            variant: "outlined",
+                                            onClick: () => openModal()
+                                        }),
+                                        Button({
+                                            content: "Open Snackbar",
+                                            width: "120px",
+                                            variant: "outlined",
+                                            onClick: () => openSnackbar("Hello!")
+                                        })
                                     )
-                                })
-                            )
+                                ]
+                            })
                         ]
-                    }),
+                    })
                 ]
             })
         );
 
         Section(
-            Form({
-                fieldsets: [
-                    Table({
-                        columns: ["Column 1", "Column 2", "Column 3"],
-                        data: [
-                            {
-                                "Column 1": "Value 1", 
-                                "Column 2": "Value 2",
-                                "Column 3": "Value 2"
-                            },
-                            {
-                                "Column 1": "Value 1", 
-                                "Column 2": "Value 2",
-                                "Column 3": "Value 2"
-                            },
-                            {
-                                "Column 1": "Value 1", 
-                                "Column 2": "Value 2",
-                                "Column 3": "Value 2"
-                            }
-                        ],
-                        checkbox: true,
-                        useAutoSort: true
-                    }),
-                    HBox(
-                        Button({
-                            content: "Submit",
-                            type: "submit"
-                        })
-                    )
-                ]
+            Table({
+                columns: ["Column 1", "Column 2", "Column 3"],
+                data: [
+                    {
+                        "Column 1": "Value 1", 
+                        "Column 2": "Value 2",
+                        "Column 3": "Value 2"
+                    },
+                    {
+                        "Column 1": "Value 1", 
+                        "Column 2": "Value 2",
+                        "Column 3": "Value 2"
+                    },
+                    {
+                        "Column 1": "Value 1", 
+                        "Column 2": "Value 2",
+                        "Column 3": "Value 2"
+                    }
+                ],
+                checkbox: true,
+                useAutoSort: true
             })
         );
         
