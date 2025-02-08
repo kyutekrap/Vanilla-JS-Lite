@@ -23,3 +23,6 @@ export * from "./Textarea/index.js";
 export * from "./FileInput/index.js";
 export * from "./Grid/index.js";
 export * from "./Line/index.js";
+export * from "./FlexBox/index.js";
+export * from "./BorderLine/index.js";
+export * from "./Search/index.js";

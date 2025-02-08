@@ -1,0 +1,9 @@
+.search {
+    border: 1px solid var(--gray-color);
+    border-radius: var(--border-radius);
+    padding: 0px var(--half-padding) 0px var(--half-padding);
+}
+
+.search .input {
+    border: 0px !important;
+}
