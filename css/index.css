@@ -5,6 +5,7 @@
     --main-color-strong: #2986c4;
     --main-color-light: #daebf6;
     --neutral-color: #eeeeee;
+    --gray-color: #cecece;
     --invert: 0;
     --normal-font-size: 0.9rem;
     --small-font-size: 0.8rem;
@@ -14,6 +15,8 @@
     --padding: 20px;
     --half-padding: 10px;
     --quarter-padding: 5px;
+    --section-width-default: 0.8;
+    --section-width-mobile: 0.9;
 }
 
 body.dark {

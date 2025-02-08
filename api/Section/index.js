@@ -5,7 +5,7 @@ class SectionExt {
     _section = null;
 
     constructor(args) {
-        this._section = VBox(args[0]);
+        this._section = VBox();
         this._section.classList.add("section");
         for (var i=0; i < args.length; i++) {
             this._section.appendChild(args[i]);

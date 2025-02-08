@@ -1,3 +1,12 @@
 .section {
     padding: var(--padding);
+    width: calc(100% * var(--section-width-default));
+    display: flex;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .section {
+        width: calc(100% * var(--section-width-mobile));
+    }
 }
