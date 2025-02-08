@@ -4,11 +4,13 @@ class FileInputExt {
     _fileInput = null;
     _realFileInput = null;
 
-    constructor(content, editable) {
+    constructor(content, editable, placeholder, width) {
         this._fileInput = document.createElement("input");
         this._fileInput.classList.add("input");
         this._fileInput.readOnly = true;
         this._fileInput.value = content;
+        this._fileInput.placeholder = placeholder;
+        this._fileInput.style.width = width;
 
         this._realFileInput = Input({ variant: "file" });
         this._realFileInput.style.display = "none";
@@ -35,7 +37,7 @@ class FileInputExt {
     }
 }
 
-export function FileInput({ content = "", editable = true } = {}) {
-    const fileInputExt = new FileInputExt(content, editable);
+export function FileInput({ content = "", editable = true, placeholder = "", width = "100%" } = {}) {
+    const fileInputExt = new FileInputExt(content, editable, placeholder, width);
     return fileInputExt._fileInput;
 }
