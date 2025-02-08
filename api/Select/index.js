@@ -5,7 +5,7 @@ class SelectExt {
 
     _select = null;
 
-    constructor(options, selected, editable, placeholder) {
+    constructor(options, selected, editable, placeholder, width) {
         this._select = document.createElement("div");
         this._select.classList.add("select");
 
@@ -13,7 +13,8 @@ class SelectExt {
             variant: "text",
             editable: editable,
             placeholder: placeholder,
-            content: selected
+            content: selected,
+            width: width
         });
         this._select.appendChild(input);
 
@@ -28,6 +29,7 @@ class SelectExt {
             });
             optionContainer.appendChild(option);
         }
+        optionContainer.style.width = `calc(${width} - var(--half-padding) - 2px)`;
         this._select.appendChild(optionContainer);
 
         input.addEventListener("change", (e) => {
@@ -36,9 +38,13 @@ class SelectExt {
         input.addEventListener("focus", (_) => {
             optionContainer.classList.add("open");
         });
+        
         document.addEventListener("click", (e) => {
             if (e.target !== input) {
                 optionContainer.classList.remove("open");
+                if (!options.includes(input.value)) {
+                    input.value = "";
+                }
             }
         })
     }
@@ -54,7 +60,7 @@ class SelectExt {
     }
 }
 
-export function Select({options=[], selected=null, editable=true, placeholder=""} = {}) {
-    const selectExt = new SelectExt(options, selected, editable, placeholder);
+export function Select({options=[], selected=null, editable=true, placeholder="", width="100%"} = {}) {
+    const selectExt = new SelectExt(options, selected, editable, placeholder, width);
     return selectExt._select;
 }
