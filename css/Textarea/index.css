@@ -1,8 +1,14 @@
 .textarea {
     border-radius: var(--border-radius);
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--gray-color);
 }
 
 .textarea:focus {
     outline: none;
+}
+
+@media (max-width: 576px) {
+    .textarea {
+        width: 100%;
+    }
 }
