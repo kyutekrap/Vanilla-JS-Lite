@@ -1,5 +1,4 @@
 .bgButton {
-    padding: var(--quarter-padding);
     background-color: transparent;
     cursor: pointer;
     background-position: center;
@@ -11,6 +10,7 @@
     background-color: var(--neutral-color);
 }
 
-.bgButton .rounded {
+.bgButton.rounded {
     border-radius: 50%;
+    padding: var(--quarter-padding);
 }
