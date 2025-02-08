@@ -16,6 +16,14 @@
     transition: transform 0.3s ease;
 }
 
+.drawer .background {
+    filter: invert(1);
+}
+
+.drawer .input {
+    color: var(--bg-color) !important;
+}
+
 .drawer.open {
     transform: translateX(0);
 }

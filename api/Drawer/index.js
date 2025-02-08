@@ -9,7 +9,6 @@ class DrawerExt {
         this._drawer = document.createElement("div");
         this._drawer.classList.add("drawer");
         const closeButton = Background({width: "30px", height: "30px", src: "/asset/arrow-left.svg", onClick: closeDrawer});
-        closeButton.style.filter = "invert(1)";
         this._drawer.appendChild(closeButton);
         for (var i=0; i < args.length; i++) {
             this._drawer.appendChild(args[i]);
