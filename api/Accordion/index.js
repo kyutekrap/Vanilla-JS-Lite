@@ -9,7 +9,7 @@ class AccordionStates {
 class AccordionExt extends AccordionStates {
     _accordion = null;
 
-    constructor(title, body, imageOnClose) {
+    constructor(title, body) {
         super();
 
         this._accordion = document.createElement("div");
@@ -23,7 +23,7 @@ class AccordionExt extends AccordionStates {
         headerTitle.style.flex = "1";
         header.appendChild(headerTitle);
         
-        const headerImage = Background({ width: "25px", height: "25px", src: imageOnClose });
+        const headerImage = Background({ width: "25px", height: "25px", src: "/asset/chev-down.svg" });
         header.appendChild(headerImage);
 
         this._accordion.appendChild(header);
@@ -52,7 +52,7 @@ class AccordionExt extends AccordionStates {
     }
 }
 
-export function Accordion({ title = "", body = [], imageOnClose = "/asset/chev-down.svg" } = {}) {
-    const accordionExt = new AccordionExt(title, body, imageOnClose);
+export function Accordion({ title = "", body = [] } = {}) {
+    const accordionExt = new AccordionExt(title, body);
     return accordionExt._accordion;
 }
