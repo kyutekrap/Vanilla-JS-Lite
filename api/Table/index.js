@@ -1,5 +1,6 @@
 import {Input} from "../Input/index.js";
 import {Span} from "../Span/index.js";
+import {VBox} from "../VBox/index.js";
 
 class TableStates {
     _filterCol = "";
@@ -8,17 +9,27 @@ class TableStates {
     _activeIndex = null;
     _columnWidths = [];
 
-    constructor(columns, checkbox) {
-        this._columnWidths = this.getColumnWidths(columns, checkbox);
+    constructor(columns, checkbox, defaultWidth) {
+        this._columnWidths = this.getColumnWidths(columns, checkbox, defaultWidth);
     }
 
-    getColumnWidths(columns, checkbox) {
+    getColumnWidths(columns, checkbox, defaultWidth) {
+        var containerWidth = defaultWidth;
+        if (!defaultWidth) {
+            const rootStyles = getComputedStyle(document.documentElement);
+            const defaultWidth = parseFloat(rootStyles.getPropertyValue("--section-width-default"));
+            const mobileWidth = parseFloat(rootStyles.getPropertyValue("--section-width-mobile"));
+
+            const percentage = window.matchMedia("(max-width: 768px)").matches ? mobileWidth : defaultWidth;
+            containerWidth = window.innerWidth * percentage;
+        }
+
         if (checkbox) {
-            const dividedWidth = Math.round((window.innerWidth - 50) / columns.length - 15);
+            const dividedWidth = Math.round((containerWidth - 50) / columns.length - 15);
             const actualWidth = dividedWidth < 150 ? 150 : dividedWidth;
             return ['50px', ...Array(columns.length).fill(`${actualWidth}px`)];
         } else {
-            const dividedWidth = Math.round(window.innerWidth / columns.length - 15);
+            const dividedWidth = Math.round(containerWidth / columns.length - 15);
             const actualWidth = dividedWidth < 150 ? 150 : dividedWidth;
             return Array(columns.length).fill(`${actualWidth}px`);
         }
@@ -32,14 +43,14 @@ class TableExt extends TableStates {
     _data = null;
     _checkbox = false;
 
-    constructor(columns, data, checkbox, useAutoSort) {
-        super(columns, checkbox);
+    constructor(columns, data, checkbox, useAutoSort, controls, defaultWidth) {
+        super(columns, checkbox, defaultWidth);
 
         this._columns = columns;
         this._data = data;
         this._checkbox = checkbox;
 
-        this._table = document.createElement("div");
+        this._table = VBox();
         this._table.classList.add("table");
 
         const innerGrid = document.createElement("div");
@@ -100,7 +111,7 @@ class TableExt extends TableStates {
                 }
 
                 if (keys.includes(columns[j])) {
-                    const span = Span(columns[j]);
+                    const span = Span(data[i][columns[j]]);
                     span.classList.add("cell-span");
                     column.appendChild(span);
                 } else {
@@ -113,6 +124,9 @@ class TableExt extends TableStates {
         }
         
         this._table.appendChild(innerGrid);
+        if (controls) {
+            this._table.appendChild(controls);
+        }
     }
 
     updateCheckboxAll(checked) {
@@ -242,7 +256,7 @@ class TableExt extends TableStates {
     };
 }
 
-export function Table({columns=[], data=[], checkbox=false, useAutoSort=false}) {
-    const tableExt = new TableExt(columns, data, checkbox, useAutoSort);
+export function Table({columns=[], data=[], checkbox=false, useAutoSort=false, controls=null, defaultWidth=null} = {}) {
+    const tableExt = new TableExt(columns, data, checkbox, useAutoSort, controls, defaultWidth);
     return tableExt._table;
 }

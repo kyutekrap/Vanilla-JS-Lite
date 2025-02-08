@@ -1,11 +1,9 @@
 .table {
     font-size: var(--normal-font-size);
-    overflow: hidden;
 }
 
 .table .inner-grid {
     display: grid;
-    width: 100%;
     overflow-x: auto;
 }
 
