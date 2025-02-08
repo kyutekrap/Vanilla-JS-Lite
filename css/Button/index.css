@@ -44,3 +44,9 @@
 .button.big {
     padding: var(--padding);
 }
+
+@media (max-width: 576px) {
+    .button {
+        width: 100%;
+    }
+}
