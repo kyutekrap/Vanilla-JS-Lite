@@ -5,7 +5,7 @@ class SelectExt {
 
     _select = null;
 
-    constructor(options, selected, editable, placeholder, width) {
+    constructor(options, selected, editable, placeholder, width, name, required) {
         this._select = document.createElement("div");
         this._select.classList.add("select");
 
@@ -14,7 +14,9 @@ class SelectExt {
             editable: editable,
             placeholder: placeholder,
             content: selected,
-            width: width
+            width: width,
+            name: name,
+            required: required
         });
         this._select.appendChild(input);
 
@@ -60,7 +62,7 @@ class SelectExt {
     }
 }
 
-export function Select({options=[], selected=null, editable=true, placeholder="", width="100%"} = {}) {
-    const selectExt = new SelectExt(options, selected, editable, placeholder, width);
+export function Select({options=[], selected=null, editable=true, placeholder="", width="100%", name="", required=false} = {}) {
+    const selectExt = new SelectExt(options, selected, editable, placeholder, width, name, required);
     return selectExt._select;
 }
